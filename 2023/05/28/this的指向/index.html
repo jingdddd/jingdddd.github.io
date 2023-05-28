@@ -16,22 +16,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="blog">
   
-    <meta name="description" content="Vue3的组件通信大致分为3类 父子组件通信 兄弟组件通信 跨级通信  Vue3父子组件传值 1、使用props将数据传递给子组件 1234567891011&#x2F;&#x2F;父组件&lt;script setup&gt;import &amp;#123; ref &amp;#125; from &amp;#x27;vue&amp;#x27;import Child from &amp;#x27;.&#x2F;Child.vue&amp;#x27; const str">
+    <meta name="description" content="this的指向this永远指向一个对象 this的指向和他调用的环境有关 全局作用域下this的指向123全局作用域下 this的指向console.log(this);&#x2F;&#x2F; 指向window&#x2F;&#x2F;这时打印宿主根对象，在浏览器中是window,在node中是global对象  对象中的this指向1234567891011关于对象的this指向function f1()&amp;#123;       co">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue3组件通信">
-<meta property="og:url" content="http://example.com/2023/05/23/vue3%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/index.html">
+<meta property="og:title" content="this的指向">
+<meta property="og:url" content="http://example.com/2023/05/28/this%E7%9A%84%E6%8C%87%E5%90%91/index.html">
 <meta property="og:site_name" content="hexo">
-<meta property="og:description" content="Vue3的组件通信大致分为3类 父子组件通信 兄弟组件通信 跨级通信  Vue3父子组件传值 1、使用props将数据传递给子组件 1234567891011&#x2F;&#x2F;父组件&lt;script setup&gt;import &amp;#123; ref &amp;#125; from &amp;#x27;vue&amp;#x27;import Child from &amp;#x27;.&#x2F;Child.vue&amp;#x27; const str">
+<meta property="og:description" content="this的指向this永远指向一个对象 this的指向和他调用的环境有关 全局作用域下this的指向123全局作用域下 this的指向console.log(this);&#x2F;&#x2F; 指向window&#x2F;&#x2F;这时打印宿主根对象，在浏览器中是window,在node中是global对象  对象中的this指向1234567891011关于对象的this指向function f1()&amp;#123;       co">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-05-23T14:08:11.000Z">
-<meta property="article:modified_time" content="2023-05-28T10:02:54.566Z">
+<meta property="article:published_time" content="2023-05-28T10:00:01.687Z">
+<meta property="article:modified_time" content="2023-05-28T10:02:44.043Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>vue3组件通信 - hexo</title>
+  <title>this的指向 - hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="vue3组件通信"></span>
+            <span id="subtitle" data-typed-text="this的指向"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-23 22:08" pubdate>
-          May 23, 2023 pm
+        <time datetime="2023-05-28 18:00" pubdate>
+          May 28, 2023 pm
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k words
+          982 words
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          10 mins
+          9 mins
         
       </span>
     
@@ -269,28 +269,26 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">vue3组件通信</h1>
+            <h1 style="display: none">this的指向</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="Vue3的组件通信大致分为3类"><a href="#Vue3的组件通信大致分为3类" class="headerlink" title="Vue3的组件通信大致分为3类"></a>Vue3的组件通信大致分为3类</h2><ul>
-<li>父子组件通信</li>
-<li>兄弟组件通信</li>
-<li>跨级通信</li>
-</ul>
-<p>Vue3父子组件传值</p>
-<p>1、使用props将数据传递给子组件</p>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs dust"><span class="language-xml">//父组件</span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript"></span></span><br><span class="language-javascript"><span class="language-xml"><span class="hljs-keyword">import</span> </span></span><span class="hljs-template-variable">&#123; ref &#125;</span><span class="language-xml"><span class="language-javascript"> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vue&#x27;</span></span></span><br><span class="language-javascript"><span class="language-xml"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Child</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./Child.vue&#x27;</span> </span></span><br><span class="language-javascript"><span class="language-xml"><span class="hljs-keyword">const</span> str = <span class="hljs-title function_">ref</span>(<span class="hljs-string">&#x27;str&#x27;</span>)</span></span><br><span class="language-javascript"><span class="language-xml"><span class="hljs-keyword">const</span> num = <span class="hljs-title function_">ref</span>(<span class="hljs-number">0</span>)</span></span><br><span class="language-javascript"><span class="language-xml"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">Child</span> <span class="hljs-attr">:msg</span>=<span class="hljs-string">&quot;msg&quot;</span>/&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+                <h1 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h1><p>this永远指向一个对象</p>
+<p>this的指向和他调用的环境有关</p>
+<h2 id="全局作用域下this的指向"><a href="#全局作用域下this的指向" class="headerlink" title="全局作用域下this的指向"></a>全局作用域下this的指向</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">全局作用域下 <span class="hljs-keyword">this</span>的指向<br>console.log(<span class="hljs-keyword">this</span>);<span class="hljs-comment">// 指向window</span><br><span class="hljs-comment">//这时打印宿主根对象，在浏览器中是window,在node中是global对象</span><br></code></pre></td></tr></table></figure>
 
-<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs handlebars"><span class="language-xml">//子组件 Child.vue</span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript"></span></span><br><span class="language-javascript"><span class="language-xml">  <span class="hljs-keyword">const</span> props = <span class="hljs-title function_">defineProps</span>(&#123;</span></span><br><span class="language-javascript"><span class="language-xml">    <span class="hljs-attr">msg</span>: <span class="hljs-title class_">String</span>,</span></span><br><span class="language-javascript"><span class="language-xml">    <span class="hljs-attr">num</span>: <span class="hljs-title class_">Number</span>,</span></span><br><span class="language-javascript"><span class="language-xml">&#125;)</span></span><br><span class="language-javascript"><span class="language-xml"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml"></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">props.msg</span>&#125;&#125;</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">props.num</span>&#125;&#125;</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+<h2 id="对象中的this指向"><a href="#对象中的this指向" class="headerlink" title="对象中的this指向"></a>对象中的this指向</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript">关于对象的<span class="hljs-variable language_">this</span>指向<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">f1</span>(<span class="hljs-params"></span>)&#123;<br>       <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>);<br>&#125;<br><span class="hljs-comment">//对象初始化时会绑定this,所以f1的指向是obj</span><br><span class="hljs-keyword">var</span> obj = &#123;<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;o1&#x27;</span>,<br>  <span class="hljs-attr">f</span>: f1<br>&#125;<br>obj.<span class="hljs-title function_">f1</span>() <span class="hljs-comment">// obj</span><br><br></code></pre></td></tr></table></figure>
 
-<p>2.emit触发父组件事件</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs xml">//子组件 Child.vue<br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">  <span class="hljs-keyword">const</span> emit = <span class="hljs-title function_">defineEmits</span>([<span class="hljs-string">&quot;click&quot;</span>])</span><br><span class="language-javascript">   <span class="hljs-title function_">handleClick</span>(<span class="hljs-params"></span>)&#123;</span><br><span class="language-javascript">     <span class="hljs-title function_">emit</span>(<span class="hljs-string">&#x27;click&#x27;</span>,<span class="hljs-number">1</span>)</span><br><span class="language-javascript">   &#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;handleChange&quot;</span>&gt;</span>按钮<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">function</span> <span class="hljs-title function_">f1</span>(<span class="hljs-params"></span>)&#123;<br>       <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(this.name);<br>&#125;<br><span class="hljs-keyword">var</span> obj = &#123;<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;o1&#x27;</span>,<br>  <span class="hljs-attr">f</span>: f1<br>&#125;<br><span class="hljs-keyword">var</span> name = <span class="hljs-string">&#x27;o2&#x27;</span><br>obj.f1() <span class="hljs-comment">// o1</span><br>f1()<span class="hljs-comment">//o2</span><br><span class="hljs-comment">//这个例子证明了this的指向与调用有关和定义无关</span><br></code></pre></td></tr></table></figure>
 
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs xml">//父组件<br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript"> <span class="hljs-keyword">import</span> <span class="hljs-title class_">Child</span> form <span class="hljs-string">&quot;./Child&quot;</span> </span><br><span class="language-javascript"> <span class="hljs-keyword">const</span> <span class="hljs-title function_">click</span> = (<span class="hljs-params">e</span>) =&gt;&#123;</span><br><span class="language-javascript">  <span class="hljs-title function_">alert</span>(e);</span><br><span class="language-javascript">&#125;</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">Child</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;click&quot;</span>/&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript">局部<span class="hljs-variable language_">this</span>的指向<br><span class="hljs-keyword">var</span> obj1 = &#123;<br>      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;o3&#x27;</span>,<br>      <span class="hljs-attr">fn</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>); <span class="hljs-comment">// 指向obj</span><br>      <span class="hljs-keyword">function</span> <span class="hljs-title function_">sayName</span>(<span class="hljs-params"></span>)&#123;<br>            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>); <span class="hljs-comment">//指向window</span><br>      &#125;<br>       <span class="hljs-title function_">sayName</span>(); <br>     &#125;<br> &#125;<br>obj1.<span class="hljs-title function_">fn</span>(); <span class="hljs-comment">//对象的函数会发生this的自动绑定，但不代表函数内部的函数会自动绑定this</span><br></code></pre></td></tr></table></figure>
 
-<p><code>defineProps</code> 和 <code>defineEmits</code> 都是只能在 <script setup> 中使用的编译器宏</p>
+<h2 id="构造函数中的this指向"><a href="#构造函数中的this指向" class="headerlink" title="构造函数中的this指向"></a>构造函数中的this指向</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//构造函数中的this</span><br><span class="hljs-keyword">var</span> name = <span class="hljs-string">&#x27;a2&#x27;</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Person</span>(<span class="hljs-params">name</span>)&#123;<br>  <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name<br>  <span class="hljs-variable language_">this</span>.<span class="hljs-property">sayName</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span>) <span class="hljs-comment">//a1</span><br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">f1</span>(<span class="hljs-params"></span>)&#123;<br>       <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span>) <span class="hljs-comment">//a2</span><br>    &#125;<br>  &#125;<br>&#125;<br><span class="hljs-keyword">const</span> p1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(<span class="hljs-string">&#x27;a1&#x27;</span>)<br>p1.<span class="hljs-title function_">sayName</span>()<br><br></code></pre></td></tr></table></figure>
+
+<h1 id="改变this的指向"><a href="#改变this的指向" class="headerlink" title="改变this的指向"></a>改变this的指向</h1><p>call</p>
+<p>aplly</p>
+<p>bind</p>
 
                 
               </div>
@@ -308,8 +306,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>vue3组件通信</div>
-      <div>http://example.com/2023/05/23/vue3组件通信/</div>
+      <div>this的指向</div>
+      <div>http://example.com/2023/05/28/this的指向/</div>
     </div>
     <div class="license-meta">
       
@@ -321,7 +319,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>May 23, 2023</div>
+          <div>May 28, 2023</div>
         </div>
       
       
@@ -353,9 +351,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/28/this%E7%9A%84%E6%8C%87%E5%90%91/" title="this的指向">
+                      <a href="/2023/05/28/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">this的指向</span>
+                        <span class="hidden-mobile">模块化</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -363,8 +361,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/11/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/" title="防抖和节流">
-                        <span class="hidden-mobile">防抖和节流</span>
+                      <a href="/2023/05/23/vue3%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="vue3组件通信">
+                        <span class="hidden-mobile">vue3组件通信</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
