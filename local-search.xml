@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title></title>
+    <link href="/2023/07/17/Vue2%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/"/>
+    <url>/2023/07/17/Vue2%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Vue-js目录"><a href="#Vue-js目录" class="headerlink" title="Vue.js目录"></a>Vue.js目录</h1><p>src<br>├── compiler        # 编译相关<br>├── core            # 核心代码<br>├── platforms       # 不同平台的支持<br>├── server          # 服务端渲染<br>├── sfc             # .vue 文件解析<br>├── shared          # 共享代码</p><h2 id="compiler"><a href="#compiler" class="headerlink" title="compiler"></a>compiler</h2><p>包含Vue.js所有编译相关的代码，他包括把模版解析成ast语法树，ast语法树优化,代码生成等功能</p><h2 id="core"><a href="#core" class="headerlink" title="core"></a>core</h2><p>包含了vue.js的核心代码，包括内置组件、全局api封装,Vue 实例化、观察者、虚拟 DOM、工具函数等等</p><h2 id="platforms"><a href="#platforms" class="headerlink" title="platforms"></a>platforms</h2><p>代表了不同的宿主环境，Vue.js是一个MVVM的框架,platforms就是入口,他可以跑web，也可以配合weex跑navive客户端</p><h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><p>服务端渲染相关的代码</p><h2 id="sfc"><a href="#sfc" class="headerlink" title="sfc"></a>sfc</h2><p>这个文件下的内容会配合webpack把.vue解析成JS对象</p><h2 id="shared"><a href="#shared" class="headerlink" title="shared"></a>shared</h2><p>Vue.js定义的工具方法</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>模块化</title>
     <link href="/2023/05/28/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
     <url>/2023/05/28/%E6%A8%A1%E5%9D%97%E5%8C%96/</url>
