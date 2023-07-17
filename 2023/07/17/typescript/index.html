@@ -16,15 +16,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="blog">
   
-    <meta name="description" content="Vue.js目录src├── compiler        # 编译相关├── core            # 核心代码├── platforms       # 不同平台的支持├── server          # 服务端渲染├── sfc             # .vue 文件解析├── shared          # 共享代码 compiler包含Vue.js所有编译相关的">
+    <meta name="description" content="类型定义1234567891011121314151617181920212223242526const name: string &#x3D; &amp;#x27;小明&amp;#x27; &#x2F;&#x2F;字符串const age:number &#x3D; 18; &#x2F;&#x2F;数字const isDone: boolean &#x3D; false; &#x2F;&#x2F;布尔值const list:number[] &#x3D; [1,2,3] 或 const list1: Arra">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo">
-<meta property="og:url" content="http://example.com/2023/07/17/Vue2%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/index.html">
+<meta property="og:url" content="http://example.com/2023/07/17/typescript/index.html">
 <meta property="og:site_name" content="hexo">
-<meta property="og:description" content="Vue.js目录src├── compiler        # 编译相关├── core            # 核心代码├── platforms       # 不同平台的支持├── server          # 服务端渲染├── sfc             # .vue 文件解析├── shared          # 共享代码 compiler包含Vue.js所有编译相关的">
+<meta property="og:description" content="类型定义1234567891011121314151617181920212223242526const name: string &#x3D; &amp;#x27;小明&amp;#x27; &#x2F;&#x2F;字符串const age:number &#x3D; 18; &#x2F;&#x2F;数字const isDone: boolean &#x3D; false; &#x2F;&#x2F;布尔值const list:number[] &#x3D; [1,2,3] 或 const list1: Arra">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-07-17T14:14:03.682Z">
-<meta property="article:modified_time" content="2023-07-17T14:13:29.230Z">
+<meta property="article:published_time" content="2023-07-17T14:22:40.753Z">
+<meta property="article:modified_time" content="2023-06-14T15:00:31.667Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
@@ -208,7 +208,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-17 22:14" pubdate>
+        <time datetime="2023-07-17 22:22" pubdate>
           July 17, 2023 pm
         </time>
       </span>
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          364 words
+          2.1k words
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          4 mins
+          18 mins
         
       </span>
     
@@ -274,14 +274,21 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Vue-js目录"><a href="#Vue-js目录" class="headerlink" title="Vue.js目录"></a>Vue.js目录</h1><p>src<br>├── compiler        # 编译相关<br>├── core            # 核心代码<br>├── platforms       # 不同平台的支持<br>├── server          # 服务端渲染<br>├── sfc             # .vue 文件解析<br>├── shared          # 共享代码</p>
-<h2 id="compiler"><a href="#compiler" class="headerlink" title="compiler"></a>compiler</h2><p>包含Vue.js所有编译相关的代码，他包括把模版解析成ast语法树，ast语法树优化,代码生成等功能</p>
-<h2 id="core"><a href="#core" class="headerlink" title="core"></a>core</h2><p>包含了vue.js的核心代码，包括内置组件、全局api封装,Vue 实例化、观察者、虚拟 DOM、工具函数等等</p>
-<h2 id="platforms"><a href="#platforms" class="headerlink" title="platforms"></a>platforms</h2><p>代表了不同的宿主环境，Vue.js是一个MVVM的框架,platforms就是入口,他可以跑web，也可以配合weex跑navive客户端</p>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><p>服务端渲染相关的代码</p>
-<h2 id="sfc"><a href="#sfc" class="headerlink" title="sfc"></a>sfc</h2><p>这个文件下的内容会配合webpack把.vue解析成JS对象</p>
-<h2 id="shared"><a href="#shared" class="headerlink" title="shared"></a>shared</h2><p>Vue.js定义的工具方法</p>
+                <h2 id="类型定义"><a href="#类型定义" class="headerlink" title="类型定义"></a>类型定义</h2><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">const</span> <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span> = <span class="hljs-string">&#x27;小明&#x27;</span> <span class="hljs-comment">//字符串</span><br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">age</span>:<span class="hljs-built_in">number</span> = <span class="hljs-number">18</span>; <span class="hljs-comment">//数字</span><br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">isDone</span>: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>; <span class="hljs-comment">//布尔值</span><br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">list</span>:<span class="hljs-built_in">number</span>[] = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>] 或 <span class="hljs-keyword">const</span> <span class="hljs-attr">list1</span>: <span class="hljs-title class_">Array</span>&lt;<span class="hljs-built_in">number</span>&gt; = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]; <span class="hljs-comment">//数组 </span><br><br><span class="hljs-keyword">const</span> x : [<span class="hljs-built_in">string</span>,<span class="hljs-built_in">number</span>] = [<span class="hljs-string">&#x27;1&#x27;</span>,<span class="hljs-number">2</span>]; <span class="hljs-comment">//元组, 元组表示已知元素类型和数量的数组</span><br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">any1</span>: <span class="hljs-built_in">any</span> = <span class="hljs-string">&#x27;1&#x27;</span> <span class="hljs-comment">//any可以表示任何类型</span><br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">warnUser</span>(<span class="hljs-params"></span>) :<span class="hljs-built_in">void</span> &#123;<br>  <br>&#125; <span class="hljs-comment">//void表示没有任何类型，当一个函数没有返回值时，你通常会见到其返回值类型是 void</span><br><br><span class="hljs-keyword">let</span> <span class="hljs-attr">u</span>: <span class="hljs-literal">undefined</span> = <span class="hljs-literal">undefined</span>; <br><span class="hljs-keyword">let</span> <span class="hljs-attr">n</span>: <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;<br><span class="hljs-literal">undefined</span>和<span class="hljs-literal">null</span>两者各自有自己的类型分别叫做<span class="hljs-literal">undefined</span>和<span class="hljs-literal">null</span>。 和 <span class="hljs-built_in">void</span>相似，<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">error</span>(<span class="hljs-params">message: <span class="hljs-built_in">string</span></span>): <span class="hljs-built_in">never</span> &#123;<br>    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(message);<br>&#125;  <span class="hljs-built_in">never</span>类型表示的是那些永不存在的值的类型<br><br><br><span class="hljs-keyword">enum</span> <span class="hljs-title class_">Color</span> &#123; <span class="hljs-title class_">Red</span>, <span class="hljs-title class_">Green</span>, <span class="hljs-title class_">Blue</span>, <span class="hljs-title class_">Alpha</span>&#125; <span class="hljs-comment">//枚举</span><br></code></pre></td></tr></table></figure>
 
+<h2 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h2><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs typescript">“尖括号”语法：<br><span class="hljs-keyword">let</span> <span class="hljs-attr">someValue</span>: <span class="hljs-built_in">any</span> = <span class="hljs-string">&quot;this is a string&quot;</span>;<br><br><span class="hljs-keyword">let</span> <span class="hljs-attr">strLength</span>: <span class="hljs-built_in">number</span> = (&lt;<span class="hljs-built_in">string</span>&gt;someValue).<span class="hljs-property">length</span>;<br><br><span class="hljs-keyword">as</span>语法：<br><span class="hljs-keyword">let</span> <span class="hljs-attr">someValue</span>: <span class="hljs-built_in">any</span> = <span class="hljs-string">&quot;this is a string&quot;</span>;<br><br><span class="hljs-keyword">let</span> <span class="hljs-attr">strLength</span>: <span class="hljs-built_in">number</span> = (someValue <span class="hljs-keyword">as</span> <span class="hljs-built_in">string</span>).<span class="hljs-property">length</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="类型联合和交叉"><a href="#类型联合和交叉" class="headerlink" title="类型联合和交叉"></a>类型联合和交叉</h2><p>类型联合用于指定一个值的类型可以是多个</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">let</span> <span class="hljs-attr">p1</span>: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span>;<br></code></pre></td></tr></table></figure>
+
+<p>类型交叉指多个类型合并为一个类型</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">type</span> <span class="hljs-title class_">NameLikeProtocal</span> = &#123;<span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>&#125;;<br><span class="hljs-keyword">type</span> <span class="hljs-title class_">AgeLikeProtocal</span> = &#123;<span class="hljs-attr">age</span>:<span class="hljs-built_in">number</span>&#125;;<br><span class="hljs-keyword">type</span> <span class="hljs-title class_">SayLikeProtocal</span> = &#123;<span class="hljs-attr">say</span>: <span class="hljs-function">(<span class="hljs-params">msg:<span class="hljs-built_in">string</span></span>)=&gt;</span> <span class="hljs-built_in">string</span> &#125;<br><span class="hljs-keyword">type</span> <span class="hljs-title class_">PersonLikeProtocal</span> = <span class="hljs-title class_">NameLikeProtocal</span> &amp; <span class="hljs-title class_">AgeLikeProtocal</span> &amp; <span class="hljs-title class_">SayLikeProtocal</span>;<br><br><span class="hljs-comment">// 去掉age属性</span><br><span class="hljs-keyword">type</span> <span class="hljs-title class_">NoAgePerson</span> = <span class="hljs-title class_">Omit</span>&lt;<span class="hljs-title class_">PersonLikeProtocal</span>,<span class="hljs-string">&#x27;age&#x27;</span>&gt;<br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">person</span>: <span class="hljs-title class_">PersonLikeProtocal</span> = &#123;<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;per&#x27;</span>,<br>  <span class="hljs-attr">age</span>:<span class="hljs-number">18</span>,<br>  <span class="hljs-title function_">say</span>(<span class="hljs-attr">str</span>:<span class="hljs-built_in">string</span>):<span class="hljs-built_in">string</span>&#123;<br>     <span class="hljs-keyword">return</span> str<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">person1</span>: <span class="hljs-title class_">NoAgePerson</span> = &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;per&#x27;</span>,<br>    <span class="hljs-title function_">say</span>(<span class="hljs-attr">str</span>:<span class="hljs-built_in">string</span>):<span class="hljs-built_in">string</span>&#123;<br>     <span class="hljs-keyword">return</span> str<br>   &#125; <br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="interface"><a href="#interface" class="headerlink" title="interface"></a>interface</h2><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-comment">//interface 主要用于定义对象和类的类型</span><br><br><span class="hljs-keyword">interface</span> <span class="hljs-title class_">IPerons</span>  &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>,<br>    <span class="hljs-attr">age</span>: <span class="hljs-built_in">number</span>,<br>    <span class="hljs-title function_">say</span>(<span class="hljs-attr">msg</span>:<span class="hljs-built_in">string</span>):<span class="hljs-built_in">string</span><br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">IPerons</span> &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;<br>    <span class="hljs-attr">age</span>: <span class="hljs-built_in">number</span>;<br>    <span class="hljs-title function_">constructor</span>(<span class="hljs-params">name:<span class="hljs-built_in">string</span>,age:<span class="hljs-built_in">number</span></span>)&#123;<br>        <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;<br>        <span class="hljs-variable language_">this</span>.<span class="hljs-property">age</span> = age;<br>    &#125;<br>    <span class="hljs-title function_">say</span>(<span class="hljs-params">msg:<span class="hljs-built_in">string</span></span>)&#123;<br>        <span class="hljs-keyword">return</span> msg<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>泛型: 在一定地方给于自由，又给了一定的限制</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">interface</span> <span class="hljs-symbol">IPerons</span>&lt;<span class="hljs-symbol">T</span>,<span class="hljs-symbol">P</span>&gt;&#123;<br>    name: P,<br>    age: T,<br>    say(msg:P):P<br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-symbol">Person</span>&lt;<span class="hljs-symbol">T,<span class="hljs-symbol">P</span></span>&gt; <span class="hljs-symbol">implements</span> <span class="hljs-symbol">IPerons</span>&lt;<span class="hljs-symbol">T,<span class="hljs-symbol">P</span></span>&gt; &#123;<br>    name: P;<br>    age: T;<br>    constructor(name:P,age:T)&#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.age = age;<br>    &#125;<br>    say(msg:P)&#123;<br>        <span class="hljs-keyword">return</span> msg<br>    &#125;<br><br>&#125;<br><span class="hljs-keyword">const</span> p1 = new Person(<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;1&#x27;</span>);<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -299,7 +306,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div></div>
-      <div>http://example.com/2023/07/17/Vue2源码解读/</div>
+      <div>http://example.com/2023/07/17/typescript/</div>
     </div>
     <div class="license-meta">
       
@@ -343,7 +350,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/17/%E9%97%AD%E5%8C%85/" title="">
+                      <a href="/2023/07/17/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B&amp;%E8%AF%B7%E6%B1%82/" title="">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Previous</span>
@@ -353,8 +360,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/28/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">
-                        <span class="hidden-mobile">模块化</span>
+                      <a href="/2023/07/17/%E9%97%AD%E5%8C%85/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,22 +16,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="blog">
   
-    <meta name="description" content="防抖（debounce）:函数在一段时间内的多次调用，仅使得最后一次调用有效。 123456789function debounce(fn,t)&amp;#123;  let timer &#x3D; null;  return function()&amp;#123;    clearTimeout(timer);     timer &#x3D; setTimeout(()&#x3D;&gt;&amp;#123;  	 fn.apply(this">
+    <meta name="description" content="什么是设计模式设计模式是软件设计中典型问题的解决方案。它们就像能根据需求进行调整的预制蓝图， 可用于解决代码中反复出现的设计问题。 设计模式六大原则(SOLID)1.单一职责原则一个类应该只有一个引起他变化的原因 2.开闭原则对扩展开放，对修改关闭 3.里氏替换原则主要阐述继承的原则: 子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法子类中可以增加自己特有的方法当子类的方法重载父类的方法时，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="防抖和节流">
-<meta property="og:url" content="http://example.com/2023/05/11/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81/index.html">
+<meta property="og:title" content="hexo">
+<meta property="og:url" content="http://example.com/2023/07/17/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="hexo">
-<meta property="og:description" content="防抖（debounce）:函数在一段时间内的多次调用，仅使得最后一次调用有效。 123456789function debounce(fn,t)&amp;#123;  let timer &#x3D; null;  return function()&amp;#123;    clearTimeout(timer);     timer &#x3D; setTimeout(()&#x3D;&gt;&amp;#123;  	 fn.apply(this">
+<meta property="og:description" content="什么是设计模式设计模式是软件设计中典型问题的解决方案。它们就像能根据需求进行调整的预制蓝图， 可用于解决代码中反复出现的设计问题。 设计模式六大原则(SOLID)1.单一职责原则一个类应该只有一个引起他变化的原因 2.开闭原则对扩展开放，对修改关闭 3.里氏替换原则主要阐述继承的原则: 子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法子类中可以增加自己特有的方法当子类的方法重载父类的方法时，">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-05-11T13:45:37.037Z">
-<meta property="article:modified_time" content="2023-05-22T13:58:19.268Z">
+<meta property="article:published_time" content="2023-07-17T14:29:15.066Z">
+<meta property="article:modified_time" content="2023-07-17T14:28:49.453Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>防抖和节流 - hexo</title>
+  <title>hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="防抖和节流"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-11 21:45" pubdate>
-          May 11, 2023 pm
+        <time datetime="2023-07-17 22:29" pubdate>
+          July 17, 2023 pm
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          469 words
+          1k words
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          4 mins
+          9 mins
         
       </span>
     
@@ -269,18 +269,28 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">防抖和节流</h1>
+            <h1 style="display: none"></h1>
             
             
               <div class="markdown-body">
                 
-                <p>防抖（debounce）:函数在一段时间内的多次调用，仅使得最后一次调用有效。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">debounce</span>(<span class="hljs-params">fn,t</span>)&#123;<br>  <span class="hljs-keyword">let</span> timer = <span class="hljs-literal">null</span>;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-built_in">clearTimeout</span>(timer);<br>     timer = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">()=&gt;</span>&#123;<br>  	 fn.<span class="hljs-title function_">apply</span>(<span class="hljs-variable language_">this</span>,<span class="hljs-variable language_">arguments</span>)<br>	&#125;,t)<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>节流(throttle): 当事件触发后，指定时间内不能在触发</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">var</span> throttle = <span class="hljs-keyword">function</span> <span class="hljs-params">(fn, t)</span> &#123;<br>    let timer, arg<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">f</span><span class="hljs-params">(<span class="hljs-rest_arg">...args</span>)</span> &#123;<br>        arg = args<br>        <span class="hljs-keyword">if</span> (timer) <span class="hljs-keyword">return</span><br>        fn(...arg)<br>        arg = <span class="hljs-literal">null</span>;<br>        timer = setTimeout(() =&gt; &#123;<br>            timer = <span class="hljs-literal">null</span>;<br>            <span class="hljs-keyword">if</span> (arg) f(...arg)<br>        &#125;, t)<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<p>节流—王者荣耀释放技能 防抖—王者荣耀回城</p>
+                <h1 id="什么是设计模式"><a href="#什么是设计模式" class="headerlink" title="什么是设计模式"></a>什么是设计模式</h1><p>设计模式是软件设计中典型问题的解决方案。它们就像能根据需求进行调整的预制蓝图， 可用于解决代码中反复出现的设计问题。</p>
+<h1 id="设计模式六大原则-SOLID"><a href="#设计模式六大原则-SOLID" class="headerlink" title="设计模式六大原则(SOLID)"></a>设计模式六大原则(SOLID)</h1><h2 id="1-单一职责原则"><a href="#1-单一职责原则" class="headerlink" title="1.单一职责原则"></a>1.单一职责原则</h2><p>一个类应该只有一个引起他变化的原因</p>
+<h2 id="2-开闭原则"><a href="#2-开闭原则" class="headerlink" title="2.开闭原则"></a>2.开闭原则</h2><p>对扩展开放，对修改关闭</p>
+<h2 id="3-里氏替换原则"><a href="#3-里氏替换原则" class="headerlink" title="3.里氏替换原则"></a>3.里氏替换原则</h2><p>主要阐述继承的原则:</p>
+<p>子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法<br>子类中可以增加自己特有的方法<br>当子类的方法重载父类的方法时，方法的前置条件（即方法的输入参数）要比父类的方法更宽松<br>当子类的方法实现父类的方法时（重写&#x2F;重载或实现抽象方法），方法的后置条件（即方法的的输出&#x2F;返回值）要比父类的方法更严格或相等</p>
+<h2 id="4-迪米特法则"><a href="#4-迪米特法则" class="headerlink" title="4.迪米特法则"></a>4.迪米特法则</h2><p>又叫作最少知识原则,只与你的直接朋友交流不和陌生人说话,两个软件实体无须直接通信，那么就不应当发生直接的相互调用，可以通过第三方转发该调用。其目的是降低类之间的耦合度，提高模块的相对独立性。</p>
+<h2 id="5-接口隔离原则"><a href="#5-接口隔离原则" class="headerlink" title="5.接口隔离原则"></a>5.接口隔离原则</h2><p>将臃肿庞大的接口拆分成更小更具体的接口</p>
+<h2 id="6-依赖倒置原则"><a href="#6-依赖倒置原则" class="headerlink" title="6.依赖倒置原则"></a>6.依赖倒置原则</h2><p>每个类尽量提供接口或抽象类，或者两者都具备。</p>
+<p>变量的声明类型尽量是接口或者是抽象类。</p>
+<p>任何类都不应该从具体类派生。</p>
+<p>使用继承时尽量遵循里氏替换原则。</p>
+<h2 id="创建者模式"><a href="#创建者模式" class="headerlink" title="创建者模式"></a>创建者模式</h2><h3 id="1-单例模式"><a href="#1-单例模式" class="headerlink" title="1.单例模式"></a>1.单例模式</h3><p>一个类只有一个实例，并提供一个全局访问的方法。</p>
+<p>主要实现是这样实现的 :在类中判断是否有这个实例，如果有就直接返回，如果没有就先实例化在返回。<br>vuex和redux就是使用单例模式实现的<br>优点：<br>1.一个代码只有一个实例<br>2.可以获得指向该实例的全局方法<br>3.仅在首次请求单例模式时进行初始化</p>
+<p>缺点:<br>1.违法了单一职责原则，同时执行了两个问题<br>2单例模式可能掩盖不良设计， 比如程序各组件之间相互了解过多等。<br>3该模式在多线程环境下需要进行特殊处理， 避免多个线程多次创建单例对象。<br>4单例的客户端代码单元测试可能会比较困难， 因为许多测试框架以基于继承的方式创建模拟对象。 由于单例类的构造函数是私有的， 而且绝大部分语言无法重写静态方法<br>5出仔细考虑模拟单例的方法。 要么干脆不编写测试代码， 或者不使用单例模式。</p>
+<h3 id="2-工厂模式"><a href="#2-工厂模式" class="headerlink" title="2.工厂模式"></a>2.工厂模式</h3><p>在父类中实现一个创建对象的方法，由子类来决定实例化对象的类型</p>
+<p>优点:<br>1.可以避免创建者与具体产品直接的紧密耦合<br>2.单一职责原则, 可以将产品的创建代码放在单一位置，使得代码更加容易维护<br>3.开闭原则,无须修改客户端代码，你就可以在产品中引入新的类型</p>
+<p>缺点<br>工厂模式会引入许多子类，会使得代码变得非常复杂</p>
 
                 
               </div>
@@ -298,8 +308,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>防抖和节流</div>
-      <div>http://example.com/2023/05/11/防抖和节流/</div>
+      <div></div>
+      <div>http://example.com/2023/07/17/设计模式/</div>
     </div>
     <div class="license-meta">
       
@@ -311,7 +321,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>May 11, 2023</div>
+          <div>July 17, 2023</div>
         </div>
       
       
@@ -343,9 +353,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/23/vue3%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" title="vue3组件通信">
+                      <a href="/2023/07/17/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vue3组件通信</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -353,8 +363,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/03/ref%E4%B8%8Ereactive/" title="ref与reactive">
-                        <span class="hidden-mobile">ref与reactive</span>
+                      <a href="/2023/07/17/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B&amp;%E8%AF%B7%E6%B1%82/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

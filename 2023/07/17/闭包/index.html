@@ -16,15 +16,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="blog">
   
-    <meta name="description" content="Vue.js目录src├── compiler        # 编译相关├── core            # 核心代码├── platforms       # 不同平台的支持├── server          # 服务端渲染├── sfc             # .vue 文件解析├── shared          # 共享代码 compiler包含Vue.js所有编译相关的">
+    <meta name="description" content="闭包闭包的概念闭包是指一个函数能够访问并操作其创建时所在的词法作用域中的变量的能力。换句话说，闭包就是能够将变量保存到函数外部的一种机制。 闭包有很多应用场景，比如可以使用它来实现私有属性、缓存计算结果、模拟事件处理程序等。但是，闭包也有一些缺点，比如容易导致内存泄漏、难以维护等。因此，在使用闭包时需要注意这些缺点，并采取相应的措施来避免它们的出现。 123456let age &#x3D; 18;func">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo">
-<meta property="og:url" content="http://example.com/2023/07/17/Vue2%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/index.html">
+<meta property="og:url" content="http://example.com/2023/07/17/%E9%97%AD%E5%8C%85/index.html">
 <meta property="og:site_name" content="hexo">
-<meta property="og:description" content="Vue.js目录src├── compiler        # 编译相关├── core            # 核心代码├── platforms       # 不同平台的支持├── server          # 服务端渲染├── sfc             # .vue 文件解析├── shared          # 共享代码 compiler包含Vue.js所有编译相关的">
+<meta property="og:description" content="闭包闭包的概念闭包是指一个函数能够访问并操作其创建时所在的词法作用域中的变量的能力。换句话说，闭包就是能够将变量保存到函数外部的一种机制。 闭包有很多应用场景，比如可以使用它来实现私有属性、缓存计算结果、模拟事件处理程序等。但是，闭包也有一些缺点，比如容易导致内存泄漏、难以维护等。因此，在使用闭包时需要注意这些缺点，并采取相应的措施来避免它们的出现。 123456let age &#x3D; 18;func">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-07-17T14:14:03.682Z">
-<meta property="article:modified_time" content="2023-07-17T14:13:29.230Z">
+<meta property="article:published_time" content="2023-07-17T14:19:22.242Z">
+<meta property="article:modified_time" content="2023-05-29T13:48:40.184Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
@@ -208,7 +208,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-17 22:14" pubdate>
+        <time datetime="2023-07-17 22:19" pubdate>
           July 17, 2023 pm
         </time>
       </span>
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          364 words
+          2.1k words
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          4 mins
+          18 mins
         
       </span>
     
@@ -274,13 +274,41 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Vue-js目录"><a href="#Vue-js目录" class="headerlink" title="Vue.js目录"></a>Vue.js目录</h1><p>src<br>├── compiler        # 编译相关<br>├── core            # 核心代码<br>├── platforms       # 不同平台的支持<br>├── server          # 服务端渲染<br>├── sfc             # .vue 文件解析<br>├── shared          # 共享代码</p>
-<h2 id="compiler"><a href="#compiler" class="headerlink" title="compiler"></a>compiler</h2><p>包含Vue.js所有编译相关的代码，他包括把模版解析成ast语法树，ast语法树优化,代码生成等功能</p>
-<h2 id="core"><a href="#core" class="headerlink" title="core"></a>core</h2><p>包含了vue.js的核心代码，包括内置组件、全局api封装,Vue 实例化、观察者、虚拟 DOM、工具函数等等</p>
-<h2 id="platforms"><a href="#platforms" class="headerlink" title="platforms"></a>platforms</h2><p>代表了不同的宿主环境，Vue.js是一个MVVM的框架,platforms就是入口,他可以跑web，也可以配合weex跑navive客户端</p>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><p>服务端渲染相关的代码</p>
-<h2 id="sfc"><a href="#sfc" class="headerlink" title="sfc"></a>sfc</h2><p>这个文件下的内容会配合webpack把.vue解析成JS对象</p>
-<h2 id="shared"><a href="#shared" class="headerlink" title="shared"></a>shared</h2><p>Vue.js定义的工具方法</p>
+                <h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h3 id="闭包的概念"><a href="#闭包的概念" class="headerlink" title="闭包的概念"></a>闭包的概念</h3><p><strong>闭包</strong>是指一个函数能够访问并操作其创建时所在的词法作用域中的变量的能力。换句话说，闭包就是能够将变量保存到函数外部的一种机制。</p>
+<p>闭包有很多应用场景，比如可以使用它来实现<strong>私有属性</strong>、<strong>缓存计算结果</strong>、<strong>模拟事件</strong>处理程序等。但是，闭包也有一些缺点，比如容易导致内存泄漏、难以维护等。因此，在使用闭包时需要注意这些缺点，并采取相应的措施来避免它们的出现。</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs arcade">let age = <span class="hljs-number">18</span>;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">cat</span>(<span class="hljs-params"></span>)&#123;<br>    age++;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(age);<span class="hljs-comment">// cat函数内输出age，该作用域没有，则向外层寻找，结果找到了，输出[19];</span><br>&#125;<br>cat();<span class="hljs-comment">//19</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">function</span> <span class="hljs-title function_">person</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">var</span> age = <span class="hljs-number">18</span>;<br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">cat</span>(<span class="hljs-params"></span>)&#123;<br>        age++;<br>        <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(age);<br>    &#125;<br>    <span class="hljs-keyword">return</span> cat;<br>&#125;<br>person();<span class="hljs-comment">// 19</span><br>person();<span class="hljs-comment">// 19</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">function</span> <span class="hljs-title function_">person</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">var</span> age = <span class="hljs-number">18</span>;<br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">cat</span>(<span class="hljs-params"></span>)&#123;<br>        age++;<br>        <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(age);<br>    &#125;<br>    <span class="hljs-keyword">return</span> cat;<br>&#125;<br><br><span class="hljs-keyword">var</span> per = person();<span class="hljs-comment">//per相当于函数cat</span><br>per();<span class="hljs-comment">// 19 即cat() 这样每次调用不在经过age的初始值，这样就可以一直增加了</span><br>per();<span class="hljs-comment">// 20</span><br>per();<span class="hljs-comment">// 21</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="闭包的使用场景"><a href="#闭包的使用场景" class="headerlink" title="闭包的使用场景"></a>闭包的使用场景</h3><p>闭包的使用场景很广泛，特别在函数式编程思想中，闭包的使用场景更多，我们列举一些具体的使用场景，包含：</p>
+<ol>
+<li>函数柯里化</li>
+<li>单例模式处理、工厂模式处理</li>
+<li>react hooks</li>
+</ol>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">curry</span><span class="hljs-params">(fn)</span> &#123;<br>  <span class="hljs-keyword">const</span> arity = fn.length;<br><br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">curried</span><span class="hljs-params">(<span class="hljs-rest_arg">...args</span>)</span> &#123;<br>    <span class="hljs-keyword">if</span> (args.length &gt;= arity) &#123;<br>      <span class="hljs-keyword">return</span> fn.apply(<span class="hljs-keyword">this</span>, args);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span> <span class="hljs-params">(<span class="hljs-rest_arg">...moreArgs</span>)</span> &#123;<br>        <span class="hljs-keyword">return</span> curried.apply(<span class="hljs-keyword">this</span>, args.concat(moreArgs));<br>      &#125;;<br>    &#125;<br>  &#125;;<br>&#125;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span><span class="hljs-params">(a, b, c)</span> &#123;<br>  <span class="hljs-keyword">return</span> a + b + c;<br>&#125;<br><br><span class="hljs-keyword">const</span> curriedAdd = curry(add);<br>console.log(curriedAdd(<span class="hljs-number">1</span>)(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>)); <span class="hljs-comment">// 输出 6</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">function</span> <span class="hljs-title function_">person</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">var</span> age = <span class="hljs-number">18</span>;<br>    <span class="hljs-keyword">function</span> <span class="hljs-title function_">cat</span>(<span class="hljs-params"></span>)&#123;<br>        age++;<br>        <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(age);<br>    &#125;<br>    <span class="hljs-keyword">return</span> cat;<br>&#125;<br><br><span class="hljs-keyword">var</span> per = person();<span class="hljs-comment">//per相当于函数cat</span><br>per();<span class="hljs-comment">// 19 即cat() 这样每次调用不在经过age的初始值，这样就可以一直增加了</span><br>per();<span class="hljs-comment">// 20</span><br>per();<span class="hljs-comment">// 21</span><br></code></pre></td></tr></table></figure>
+
+<p>Compose 函数</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">compose</span><span class="hljs-params">(<span class="hljs-rest_arg">...funcs</span>: Function[])</span> &#123;<br>  <span class="hljs-keyword">if</span> (funcs.length === <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-comment">// infer the argument type so it is usable in inference down the line</span><br>    <span class="hljs-keyword">return</span> &lt;T&gt;(arg: T) =&gt; arg<br>  &#125;<br><br>  <span class="hljs-keyword">if</span> (funcs.length === <span class="hljs-number">1</span>) &#123;<br>    <span class="hljs-keyword">return</span> funcs[<span class="hljs-number">0</span>]<br>  &#125;<br><br>  <span class="hljs-keyword">return</span> funcs.reduce(<br>    (a, b) =&gt;<br>      (...args: any) =&gt;<br>        a(b(...args))<br>  )<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="避免内存泄漏"><a href="#避免内存泄漏" class="headerlink" title="避免内存泄漏"></a>避免内存泄漏</h3><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">function</span> <span class="hljs-title function_">outer</span>(<span class="hljs-params"></span>) &#123;<br>  let a = <span class="hljs-number">1</span>;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">inner</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(a);<br>    a = <span class="hljs-literal">null</span>; <span class="hljs-comment">// 手动清除外部变量</span><br>    inner = <span class="hljs-literal">null</span>; <span class="hljs-comment">// 手动清除内部函数</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>在上面的例子中，我们在 inner 函数的最后手动将 a 变量和 inner 函数置为 null，以释放内存。</p>
+<p>使用 IIFE：可以使用立即执行函数表达式（Immediately Invoked Function Expression，IIFE）来创建一个独立的作用域，并在作用域结束时自动清除变量和函数。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">outer</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>;<br>  <span class="hljs-keyword">const</span> obj = &#123;<br>    <span class="hljs-attr">inner</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a);<br>    &#125;,<br>    <span class="hljs-attr">clear</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>      a = <span class="hljs-literal">null</span>;<br>      obj.<span class="hljs-property">inner</span> = <span class="hljs-literal">null</span>;<br>    &#125;<br>  &#125;;<br>  <span class="hljs-keyword">return</span> obj;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="闭包面试常问"><a href="#闭包面试常问" class="headerlink" title="闭包面试常问"></a>闭包面试常问</h3><ol>
+<li>闭包的概念</li>
+<li>什么时候需要使用闭包</li>
+<li>函数柯里化</li>
+<li>React Hooks 的原理</li>
+</ol>
 
                 
               </div>
@@ -299,7 +327,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div></div>
-      <div>http://example.com/2023/07/17/Vue2源码解读/</div>
+      <div>http://example.com/2023/07/17/闭包/</div>
     </div>
     <div class="license-meta">
       
@@ -343,7 +371,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/17/%E9%97%AD%E5%8C%85/" title="">
+                      <a href="/2023/07/17/typescript/" title="">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Previous</span>
@@ -353,8 +381,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/28/%E6%A8%A1%E5%9D%97%E5%8C%96/" title="模块化">
-                        <span class="hidden-mobile">模块化</span>
+                      <a href="/2023/07/17/Vue2%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
