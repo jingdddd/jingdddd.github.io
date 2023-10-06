@@ -1,0 +1,657 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="blog">
+  
+    <meta name="description" content="规范约定通常的规范约束包含:  代码相关：js&#x2F;ts&#x2F;style 编码规范 命名与单词拼写规范 git 提交规范等  规范约束代码相关检查我们使用 eslint 约束 ts 编码，stylelint 约束样式相关。 安装 stylelint12345678910&quot;script&quot;: &amp;#123;    &quot;lint:style&quot;: &amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端项目规范约束">
+<meta property="og:url" content="http://example.com/2023/10/06/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E8%A7%84%E8%8C%83%E7%BA%A6%E6%9D%9F/index.html">
+<meta property="og:site_name" content="jingdddd">
+<meta property="og:description" content="规范约定通常的规范约束包含:  代码相关：js&#x2F;ts&#x2F;style 编码规范 命名与单词拼写规范 git 提交规范等  规范约束代码相关检查我们使用 eslint 约束 ts 编码，stylelint 约束样式相关。 安装 stylelint12345678910&quot;script&quot;: &amp;#123;    &quot;lint:style&quot;: &amp;quot">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\ASUS\Desktop\%E9%87%8D%E8%A6%81%E6%96%87%E4%BB%B6\SharedScreenshot.jpg">
+<meta property="article:published_time" content="2023-10-06T11:11:03.115Z">
+<meta property="article:modified_time" content="2023-10-06T12:21:54.171Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="c:\Users\ASUS\Desktop\%E9%87%8D%E8%A6%81%E6%96%87%E4%BB%B6\SharedScreenshot.jpg">
+  
+  
+  
+  <title>前端项目规范约束 - jingdddd</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="前端项目规范约束"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-10-06 19:11" pubdate>
+          October 6, 2023 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.8k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          57 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">前端项目规范约束</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="规范约定"><a href="#规范约定" class="headerlink" title="规范约定"></a>规范约定</h3><p>通常的规范约束包含:</p>
+<ul>
+<li>代码相关：js&#x2F;ts&#x2F;style 编码规范</li>
+<li>命名与单词拼写规范</li>
+<li>git 提交规范等</li>
+</ul>
+<h4 id="规范约束"><a href="#规范约束" class="headerlink" title="规范约束"></a>规范约束</h4><p>代码相关检查我们使用 eslint 约束 ts 编码，stylelint 约束样式相关。</p>
+<h5 id="安装-stylelint"><a href="#安装-stylelint" class="headerlink" title="安装 stylelint"></a><strong>安装 stylelint</strong></h5><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;script&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;lint:style&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;stylelint **/*.&#123;vue,css&#125;&quot;</span><span class="hljs-punctuation">,</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br><span class="hljs-attr">&quot;devDependencies&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;stylelint&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;15.10.2&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;stylelint-config-standard&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;34.0.0&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;stylelint-config-prettier&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;9.0.5&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;stylelint-config-html&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;1.1.0&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;stylelint-config-vue&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;1.0.0&quot;</span><span class="hljs-punctuation">,</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="安装-cspell"><a href="#安装-cspell" class="headerlink" title="安装 cspell"></a><strong>安装 cspell</strong></h5><pre><code class="hljs">&quot;script&quot;: &#123;
+    &quot;spellcheck&quot;: &quot;cspell lint --dot --gitignore --color --cache --show-suggestions \&quot;src/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\&quot;&quot;,
+&#125;,
+&quot;devDependencies&quot;: &#123;
+    &quot;cspell&quot;: &quot;6.31.2&quot;,
+&#125;
+</code></pre>
+<p>配置 cspell，需要在项目根目录创建 <code>cspell.json</code></p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs prolog">&#123;<br>  <span class="hljs-string">&quot;import&quot;</span>: [<span class="hljs-string">&quot;@cspell/dict-lorem-ipsum/cspell-ext.json&quot;</span>],<br>  <span class="hljs-string">&quot;caseSensitive&quot;</span>: false,<br>  <span class="hljs-string">&quot;dictionaries&quot;</span>: [<span class="hljs-string">&quot;custom-words&quot;</span>],<br>  <span class="hljs-string">&quot;dictionaryDefinitions&quot;</span>: [<br>    &#123;<br>      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;custom-words&quot;</span>,<br>      <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;./.cspell/custom-words.txt&quot;</span>,<br>      <span class="hljs-string">&quot;addWords&quot;</span>: true<br>    &#125;<br>  ],<br>  <span class="hljs-string">&quot;ignorePaths&quot;</span>: [<span class="hljs-string">&quot;**/node_modules/**&quot;</span>, <span class="hljs-string">&quot;**/dist/**&quot;</span>, <span class="hljs-string">&quot;**/lib/**&quot;</span>, <span class="hljs-string">&quot;**/docs/**&quot;</span>, <span class="hljs-string">&quot;**/stats.html&quot;</span>]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>并在项目根目录创建 .cspell&#x2F;custom-words.txt，把那些你主观认为是对的的单词放进去，比如：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">behaviour</span><br><span class="hljs-attribute">commitlint</span><br><span class="hljs-attribute">conventionalcommits</span><br><span class="hljs-attribute">optimizelegibility</span><br><span class="hljs-attribute">pinia</span><br><span class="hljs-attribute">tiptap</span><br><span class="hljs-attribute">vuedraggable</span><br><span class="hljs-attribute">vuejs</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="commit-检测"><a href="#commit-检测" class="headerlink" title="commit 检测"></a>commit 检测</h4><h5 id="huscky-相关"><a href="#huscky-相关" class="headerlink" title="huscky 相关"></a>huscky 相关</h5><p>为了在提交时进行代码检测，我们就需要使用 git 提交钩子进行处理，方便起见我们一般使用 <code>husky</code>，同时我们需要使用 <code>commitlint</code> 以及 <code>lint-stage</code> 相关来配置如何检测。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs perl">&#123;<br>    <span class="hljs-string">&quot;script&quot;</span>: &#123;<br>        <span class="hljs-string">&quot;prepare&quot;</span>: <span class="hljs-string">&quot;husky install&quot;</span>,<br>        <span class="hljs-string">&quot;lint:stage&quot;</span>: <span class="hljs-string">&quot;lint-staged&quot;</span>,<br>        <span class="hljs-string">&quot;commit&quot;</span>: <span class="hljs-string">&quot;git-cz&quot;</span>,<br>        <span class="hljs-string">&quot;commitlint&quot;</span>: <span class="hljs-string">&quot;commitlint --edit&quot;</span><br>    &#125;,  <br>    <span class="hljs-string">&quot;lint-staged&quot;</span>: &#123;<br>        <span class="hljs-string">&quot;*&quot;</span>: <span class="hljs-string">&quot;prettier --write&quot;</span>,<br>        <span class="hljs-string">&quot;*.&#123;vue,ts&#125;&quot;</span>: <span class="hljs-string">&quot;eslint --fix&quot;</span>,<br>        <span class="hljs-string">&quot;*.&#123;html,vue,css,sass,scss&#125;&quot;</span>: <span class="hljs-string">&quot;stylelint --fix&quot;</span><br>    &#125;,<br>    <span class="hljs-string">&quot;config&quot;</span>: &#123;<br>        <span class="hljs-string">&quot;commitizen&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;node_modules/cz-git&quot;</span><br>        &#125;<br>    &#125;,<br>    <span class="hljs-string">&quot;devDependencies&quot;</span>: &#123;<br>        <span class="hljs-string">&quot;@commitlint/cli&quot;</span>: <span class="hljs-string">&quot;17.6.7&quot;</span>,<br>        <span class="hljs-string">&quot;@commitlint/config-conventional&quot;</span>: <span class="hljs-string">&quot;17.6.7&quot;</span>,<br>        <span class="hljs-string">&quot;@commitlint/cz-commitlint&quot;</span>: <span class="hljs-string">&quot;17.6.7&quot;</span>,<br>        <span class="hljs-string">&quot;husky&quot;</span>: <span class="hljs-string">&quot;8.0.3&quot;</span>,<br>        <span class="hljs-string">&quot;lint-staged&quot;</span>: <span class="hljs-string">&quot;13.2.3&quot;</span>,<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>执行 <code>pnpm prepare</code> 就会在根目录生成 <code>.huscky</code>，钩子相关的内容写在这里。</p>
+<p> <img src="C:\Users\ASUS\Desktop\重要文件\SharedScreenshot.jpg" srcset="/img/loading.gif" lazyload alt="SharedScreenshot"></p>
+<p>pre-commit钩子。使用 <code>zx</code> 它能让我们写 js 代码以执行脚本相关。</p>
+<p>安装zx和tsno</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/usr/bin/env sh</span><br>. <span class="hljs-string">&quot;<span class="hljs-subst">$(dirname <span class="hljs-string">&quot;<span class="hljs-variable">$0</span>&quot;</span>)</span>/_/husky.sh&quot;</span><br><br>pnpm <span class="hljs-built_in">exec</span> tsno run ./scripts/pre-commit.ts<br></code></pre></td></tr></table></figure>
+
+<p>在项目根目录下创建 <code>scripts/xxx</code> 具体脚本的内容我们在 <code>scripts/pre-commit.ts</code> 中编写。</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-comment">#!/usr/bin/env zx</span><br><br><span class="hljs-keyword">import</span> &#123; $ &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;zx&#x27;</span><br><br>console.log(<span class="hljs-string">&#x27;开始执行代码质量评估...\n&#x27;</span>)<br><br><span class="hljs-keyword">await</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&#x27;./check&#x27;</span>).<span class="hljs-keyword">catch</span>(<span class="hljs-function"><span class="hljs-params">(out)</span> =&gt;</span> &#123;<br>  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&#x27;代码质量评估失败, 请检查代码&#x27;</span>)<br>&#125;)<br><br>console.log(<span class="hljs-string">&#x27;printf &quot;检测通过, 创建 commit 中...\n&#x27;</span>)<br><br><span class="hljs-keyword">await</span> $`<span class="language-javascript">git add .</span>`<br><br></code></pre></td></tr></table></figure>
+
+<p>.&#x2F;check.ts</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-meta">#!/usr/bin/env zx</span><br><br><span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span> &#123; <span class="hljs-title class_">ProcessOutput</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;zx&#x27;</span><br><span class="hljs-keyword">import</span> &#123; $ &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;zx&#x27;</span><br><span class="hljs-keyword">import</span> &#123; printObject &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./utils&#x27;</span><br><br><span class="hljs-keyword">await</span> $<span class="hljs-string">`pnpm spellcheck`</span>.<span class="hljs-title function_">catch</span>(<span class="hljs-function">(<span class="hljs-params">out: ProcessOutput</span>) =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(out)<br><br>  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(out.<span class="hljs-property">stdout</span>)<br>&#125;)<br><br><span class="hljs-comment">// check type and stage</span><br><span class="hljs-keyword">await</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">all</span>([$<span class="hljs-string">`pnpm type-check`</span>, $<span class="hljs-string">`pnpm lint:stage`</span>]).<span class="hljs-title function_">catch</span>(<span class="hljs-function">(<span class="hljs-params">out: ProcessOutput</span>) =&gt;</span> &#123;<br>  <span class="hljs-title function_">printObject</span>(out)<br>  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(out.<span class="hljs-property">stdout</span>)<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<p>.&#x2F;utils</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">import</span> &#123; <span class="hljs-title class_">ProcessOutput</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;zx/core&#x27;</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">printObject</span>(<span class="hljs-params"></span><br><span class="hljs-params">  <span class="hljs-built_in">object</span>: Record&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">unknown</span>&gt; | ProcessOutput,</span><br><span class="hljs-params">  method: <span class="hljs-string">&#x27;log&#x27;</span> | <span class="hljs-string">&#x27;warn&#x27;</span> | <span class="hljs-string">&#x27;error&#x27;</span> = <span class="hljs-string">&#x27;log&#x27;</span></span><br><span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> [key, value] <span class="hljs-keyword">of</span> <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">entries</span>(<span class="hljs-built_in">object</span>)) &#123;<br>    <span class="hljs-comment">// eslint-disable-next-line no-console</span><br>    <span class="hljs-variable language_">console</span>[method](<span class="hljs-string">`<span class="hljs-subst">$&#123;key&#125;</span>:\n<span class="hljs-subst">$&#123;value&#125;</span>\n`</span>)<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="commitlint-相关"><a href="#commitlint-相关" class="headerlink" title="commitlint 相关"></a>commitlint 相关</h5><p>另外，commitlint 及 git-cz 相关的配置我们需要在根目录创建 <code>commitlint.config.js</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">module.exports</span> <span class="hljs-string">=</span> &#123;<br>  <span class="hljs-attr">extends:</span> [<span class="hljs-string">&#x27;@commitlint/config-conventional&#x27;</span>], <span class="hljs-string">//</span> <span class="hljs-string">extends</span> <span class="hljs-string">can</span> <span class="hljs-string">be</span> <span class="hljs-string">nested</span><br>  <span class="hljs-attr">parserPreset:</span> <span class="hljs-string">&#x27;conventional-changelog-conventionalcommits&#x27;</span>,<br>  <span class="hljs-attr">prompt:</span> &#123;<br>    <span class="hljs-attr">settings:</span> &#123;&#125;,<br>    <span class="hljs-attr">messages:</span> &#123;<br>      <span class="hljs-attr">skip:</span> <span class="hljs-string">&#x27;:skip&#x27;</span>,<br>      <span class="hljs-attr">max:</span> <span class="hljs-string">&#x27;upper %d chars&#x27;</span>,<br>      <span class="hljs-attr">min:</span> <span class="hljs-string">&#x27;%d chars at least&#x27;</span>,<br>      <span class="hljs-attr">emptyWarning:</span> <span class="hljs-string">&#x27;can not be empty&#x27;</span>,<br>      <span class="hljs-attr">upperLimitWarning:</span> <span class="hljs-string">&#x27;over limit&#x27;</span>,<br>      <span class="hljs-attr">lowerLimitWarning:</span> <span class="hljs-string">&#x27;below limit&#x27;</span><br>    &#125;,<br>    <span class="hljs-attr">types:</span> [<br>      &#123; <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;feat&#x27;</span>, <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;feat:     ✨  A new feature&#x27;</span>, <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;✨ &#x27;</span> &#125;,<br>      &#123; <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;fix&#x27;</span>, <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;fix:      🐛  A bug fix&#x27;</span>, <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;🐛 &#x27;</span> &#125;,<br>      &#123; <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;docs&#x27;</span>, <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;docs:     📝  Documentation only changes&#x27;</span>, <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;📝 &#x27;</span> &#125;,<br>      &#123;<br>        <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;style&#x27;</span>,<br>        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;style:    💄  Changes that do not affect the meaning of the code&#x27;</span>,<br>        <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;💄 &#x27;</span><br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;refactor&#x27;</span>,<br>        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;refactor: 📦️   A code change that neither fixes a bug nor adds a feature&#x27;</span>,<br>        <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;📦️ &#x27;</span><br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;perf&#x27;</span>,<br>        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;perf:     🚀  A code change that improves performance&#x27;</span>,<br>        <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;🚀 &#x27;</span><br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;test&#x27;</span>,<br>        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;test:     🚨  Adding missing tests or correcting existing tests&#x27;</span>,<br>        <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;🚨 &#x27;</span><br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;build&#x27;</span>,<br>        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;build:    🛠   Changes that affect the build system or external dependencies&#x27;</span>,<br>        <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;🛠 &#x27;</span><br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;ci&#x27;</span>,<br>        <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;ci:       🎡  Changes to our CI configuration files and scripts&#x27;</span>,<br>        <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;🎡 &#x27;</span><br>      &#125;,<br>      &#123;<br>        <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;chore&#x27;</span>,<br>        <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;chore:    🔨  Other changes that don&#x27;t modify src or test files&quot;</span>,<br>        <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;🔨 &#x27;</span><br>      &#125;,<br>      &#123; <span class="hljs-attr">value:</span> <span class="hljs-string">&#x27;revert&#x27;</span>, <span class="hljs-attr">name:</span> <span class="hljs-string">&#x27;revert:   ⏪️  Reverts a previous commit&#x27;</span>, <span class="hljs-attr">emoji:</span> <span class="hljs-string">&#x27;:rewind:&#x27;</span> &#125;<br>    ],<br>    <span class="hljs-attr">useEmoji:</span> <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">confirmColorize:</span> <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">emojiAlign:</span> <span class="hljs-string">&#x27;center&#x27;</span>,<br>    <span class="hljs-attr">questions:</span> &#123;<br>      <span class="hljs-attr">scope:</span> &#123;<br>        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;What is the scope of this change (e.g. component or file name)&#x27;</span><br>      &#125;,<br>      <span class="hljs-attr">subject:</span> &#123;<br>        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;Write a short, imperative tense description of the change&#x27;</span><br>      &#125;,<br>      <span class="hljs-attr">body:</span> &#123;<br>        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;Provide a longer description of the change&#x27;</span><br>      &#125;,<br>      <span class="hljs-attr">isBreaking:</span> &#123;<br>        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;Are there any breaking changes?&#x27;</span><br>      &#125;,<br>      <span class="hljs-attr">breakingBody:</span> &#123;<br>        <span class="hljs-attr">description:</span><br>          <span class="hljs-string">&#x27;A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself&#x27;</span><br>      &#125;,<br>      <span class="hljs-attr">breaking:</span> &#123;<br>        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;Describe the breaking changes&#x27;</span><br>      &#125;,<br>      <span class="hljs-attr">isIssueAffected:</span> &#123;<br>        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;Does this change affect any open issues?&#x27;</span><br>      &#125;,<br>      <span class="hljs-attr">issuesBody:</span> &#123;<br>        <span class="hljs-attr">description:</span><br>          <span class="hljs-string">&#x27;If issues are closed, the commit requires a body. Please enter a longer description of the commit itself&#x27;</span><br>      &#125;,<br>      <span class="hljs-attr">issues:</span> &#123;<br>        <span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;Add issue references (e.g. &quot;fix #123&quot;, &quot;re #123&quot;.)&#x27;</span><br>      &#125;<br>    &#125;<br>  &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>前端项目规范约束</div>
+      <div>http://example.com/2023/10/06/前端项目规范约束/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>October 6, 2023</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/07/25/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/" title="数据类型判断 ">
+                        <span class="hidden-mobile">数据类型判断 </span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
